@@ -299,9 +299,9 @@
 //   let success = true;
 
 //   if (success) {
-//     resolve("Kaam ho gaya ✅");
+//     resolve("Kaam ho gaya ");
 //   } else {
-//     reject("Error aa gaya ❌");
+//     reject("Error aa gaya ");
 //   }
 
 // });
@@ -313,9 +313,9 @@
 //       let foodReady = true;
 
 //       if (foodReady) {
-//         resolve("Food delivered 🍔");
+//         resolve("Food delivered ");
 //       } else {
-//         reject("Restaurant closed 😢");
+//         reject("Restaurant closed ");
 //       }
 //     }, 3000);
 //   });
@@ -326,15 +326,58 @@
 //   .catch(err => console.log(err));
 
 
-function step1() {
-  return Promise.resolve("Step 1 done");
+// function step1() {
+//   return Promise.resolve("Step 1 done");
+// }
+
+// function step2(msg) {
+//   return Promise.resolve(msg + " → Step 2 done");
+// }
+
+// step1()
+//   .then(res => step2(res))
+//   .then(final => console.log(final))
+//   .catch(err => console.log(err));
+
+
+
+// function loadData(callback) {
+//   setTimeout(() => {
+//     console.log("Data loaded");
+//     callback();
+//   }, 2000);
+// }
+
+// function processData() {
+//   console.log("Data processed");
+// }
+
+// loadData(processData);
+
+
+// let promise = new Promise((resolve, reject) => {
+//   let success = true;
+
+//   if (success) {
+//     resolve("Kaam ho gaya ");
+//   } else {
+//     reject("Kaam fail ");
+//   }
+// });
+
+// promise
+//   .then(result => console.log(result))
+//   .catch(error => console.log(error));
+
+
+function getData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Server se data mil gaya ");
+    }, 2000);
+  });
 }
 
-function step2(msg) {
-  return Promise.resolve(msg + " → Step 2 done");
-}
-
-step1()
-  .then(res => step2(res))
-  .then(final => console.log(final))
+getData()
+  .then(data => console.log(data))
   .catch(err => console.log(err));
