@@ -370,14 +370,26 @@
 //   .catch(error => console.log(error));
 
 
-function getData() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Server se data mil gaya ");
-    }, 2000);
-  });
-}
+// function getData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Server se data mil gaya ");
+//     }, 2000);
+//   });
+// }
 
-getData()
-  .then(data => console.log(data))
-  .catch(err => console.log(err));
+// getData()
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+
+
+setTimeout(() => {
+  console.log("Step 1");
+  setTimeout(() => {
+    console.log("Step 2");
+    setTimeout(() => {
+      console.log("Step 3");
+    }, 1000);
+  }, 1000);
+}, 1000);
