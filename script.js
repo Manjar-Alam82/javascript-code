@@ -384,12 +384,25 @@
 
 
 
-setTimeout(() => {
-  console.log("Step 1");
-  setTimeout(() => {
-    console.log("Step 2");
-    setTimeout(() => {
-      console.log("Step 3");
-    }, 1000);
-  }, 1000);
-}, 1000);
+// setTimeout(() => {
+//   console.log("Step 1");
+//   setTimeout(() => {
+//     console.log("Step 2");
+//     setTimeout(() => {
+//       console.log("Step 3");
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
+
+try {
+  let age = 15;
+
+  if (age < 18) {
+    throw "Age 18 se kam hai";
+  }
+
+  console.log("Allowed");
+} catch (err) {
+  console.log("Error:", err);
+}
