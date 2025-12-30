@@ -395,14 +395,22 @@
 // }, 1000);
 
 
-try {
-  let age = 15;
+// try {
+//   let age = 15;
 
-  if (age < 18) {
-    throw "Age 18 se kam hai";
-  }
+//   if (age < 18) {
+//     throw "Age 18 se kam hai";
+//   }
 
-  console.log("Allowed");
-} catch (err) {
-  console.log("Error:", err);
+//   console.log("Allowed");
+// } catch (err) {
+//   console.log("Error:", err);
+// }
+
+
+function welcome(name = "Guest") {
+  return "Welcome " + name;
 }
+
+console.log(welcome());
+console.log(welcome("Manjar"));
