@@ -408,9 +408,11 @@
 // }
 
 
-function welcome(name = "Guest") {
+function welcome(name = "frends") {
   return "Welcome " + name;
 }
 
 console.log(welcome());
-console.log(welcome("Manjar"));
+console.log(welcome("sahil"));
+
+
